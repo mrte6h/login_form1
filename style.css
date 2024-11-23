@@ -1,0 +1,358 @@
+/* Write your CSS code here */
+
+/* Wriyour CSS code here */
+
+:root {
+  --dark: #10002b;
+  --dark-900: #240046;
+  --dark-800: #3c096c;
+  --dark-700: #5a189a;
+  --dark-600: #7b2cbf;
+  --dark-500: #c77dff;
+  --dark-400: #e0aaff;
+  --white: #ffff;
+  --black: #000000;
+}
+html {
+  font-size: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin-inline: 20px;
+
+  font-family: "Roboto", sans-serif;
+  height: 130vh;
+  background-color: var(--black);
+}
+
+.content {
+  opacity: 0;
+  transition: opacity 1.5s ease-in;
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+a {
+  text-decoration: none;
+  transition: all 150ms ease-in;
+}
+
+main {
+  position: relative;
+  /* display: inline-block; */
+  background: var(--dark);
+  margin: 60px auto;
+  max-width: 90rem;
+  height: 55rem;
+  /* border-radius: 20px; */
+  display: flex;
+  transition: 0.5s;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.text_content {
+  padding: 1.5rem 3rem;
+  max-width: 55rem;
+}
+
+h2 {
+  color: var(--dark-400);
+  font-size: 3rem;
+  text-shadow: 2px 0px 10px #e0aaff;
+}
+
+p {
+  color: var(--dark-400);
+  font-size: 2rem;
+}
+
+.input {
+  width: clamp(18rem, 30vw, 30rem);
+  padding: 1.5rem 1.5rem 1.5rem 4.5rem;
+  margin-top: 1rem;
+  background-color: transparent;
+  border: 0.1rem var(--dark-400) solid;
+  border-radius: 1rem;
+  color: var(--white);
+  font-size: 1.4rem;
+  transition: all 200ms ease-in;
+}
+
+.email_kepper {
+  position: relative;
+}
+
+.email_icone {
+  position: absolute;
+  left: 1rem;
+  top: 2.15rem;
+  opacity: 0.8;
+}
+.input:focus {
+  outline: none;
+  -webkit-box-shadow: 0px 0px 39px 3px rgba(123, 44, 191, 1);
+  -moz-box-shadow: 0px 0px 39px 3px rgba(123, 44, 191, 1);
+  box-shadow: 0px 0px 39px 3px rgba(123, 44, 191, 1);
+}
+
+/* .input:focus::placeholder {
+
+} */
+
+.links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+
+/* .link {
+
+
+} */
+
+
+.forgot {
+  font-size: 1.5rem;
+  color: rgb(71, 166, 233);
+}
+
+.forgot:hover {
+  text-decoration: 0.1rem rgb(71, 166, 233) underline;
+}
+.next_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.7rem;
+  background-color: var(--dark-600);
+  color: var(--white);
+  padding: 1.3rem 2rem;
+  border-radius: 1rem;
+  font-size: 1.8rem;
+  letter-spacing: 0.3rem;
+  transition: all 200ms ease-in;
+}
+
+.next_btn:hover {
+  -webkit-box-shadow: 0px 0px 39px 3px rgba(123, 44, 191, 1);
+  -moz-box-shadow: 0px 0px 39px 3px rgba(123, 44, 191, 1);
+  box-shadow: 0px 0px 39px 3px rgba(123, 44, 191, 1);
+}
+
+.next_btn:hover .icone {
+  animation: animatex 0.7s linear infinite;
+}
+
+@keyframes animatex {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(1rem);
+  }
+
+  0% {
+    transform: translateX(0);
+  }
+}
+
+.icone {
+  transition: all 200ms ease-in;
+  color: var(--white);
+}
+
+.btn_text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  color: gray;
+  font-size: 1.5rem;
+}
+
+.line {
+  width: 100%;
+  height: 0.1rem;
+  background-color: gray;
+  margin-top: 2.5rem;
+  opacity: 0.3;
+}
+
+.social_btn {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4rem;
+  color: var(--white);
+  margin-top: 3rem;
+}
+
+.google_btn,
+.facebook_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* position: relative; */
+  gap: 1rem;
+  padding: 0.5rem 3rem;
+  font-size: 1.8rem;
+  border: 0.2rem var(--dark-600) solid;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: all 150ms ease-in;
+}
+/* 
+.facebook_btn span{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+
+.google_btn span{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    overflow: hidden;
+    border-radius: 1rem;
+} */
+
+.facebook_btn:hover,
+.google_btn:hover {
+  background-color: var(--dark-600);
+}
+
+.caption_text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+  font-size: 1.5rem;
+}
+
+.text {
+  color: gray;
+}
+
+.sign_link {
+  color: rgb(71, 166, 233);
+}
+
+.sign_link:hover {
+  text-decoration: rgb(71, 166, 233) underline;
+}
+
+.img_kepper {
+  max-width: 50rem;
+  height: 100%;
+  overflow: hidden;
+  /* border-radius: 0 2rem 2rem 0; */
+}
+
+.image {
+  height: 100%;
+}
+
+/* hhhhhhhhhhhhhhhhhhhhhhhhhhhhh */
+
+main > span {
+  position: absolute;
+  display: block;
+}
+
+main > span:nth-child(1) {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #7b2cbf);
+  animation: animate1 1s linear infinite;
+}
+
+@keyframes animate1 {
+  0% {
+    left: -100%;
+  }
+
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+main > span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #7b2cbf);
+  animation: animate2 1s linear infinite;
+  animation-delay: 0.25s;
+}
+
+@keyframes animate2 {
+  0% {
+    top: -100%;
+  }
+
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+
+main > span:nth-child(3) {
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(270deg, transparent, #7b2cbf);
+  animation: animate3 1s linear infinite;
+  animation-delay: 0.5s;
+}
+
+@keyframes animate3 {
+  0% {
+    right: -100%;
+  }
+
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+
+main > span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #7b2cbf);
+  animation: animate4 1s linear infinite;
+  animation-delay: 0.75s;
+}
+
+@keyframes animate4 {
+  0% {
+    bottom: -100%;
+  }
+
+  50%,
+  100% {
+    bottom: 100%;
+  }
+}
